@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfraCredit Email Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'infra-blue': '#1e40af',
+                        'infra-green': '#10b981',
+                        'infra-teal': '#14b8a6',
+                    },
+                    fontFamily: {
+                        'sans': ['Arial', 'Helvetica', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #1e40af, #14b8a6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .banner-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            margin: 0 8px;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            opacity: 1;
+        }
+
+        /* Mobile responsiveness improvements */
+        @media (max-width: 768px) {
+            .container-mobile {
+                margin: 0.5rem !important;
+                border-width: 8px !important;
+            }
+            
+            .header-mobile {
+                padding: 1rem !important;
+            }
+            
+            .logo-mobile {
+                height: 2.5rem !important;
+            }
+            
+            .banner-mobile {
+                padding: 0.75rem !important;
+            }
+            
+            .content-mobile {
+                padding: 1.5rem !important;
+            }
+            
+            .subject-mobile {
+                font-size: 1.25rem !important;
+                line-height: 1.75rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+            
+            .topic-mobile {
+                font-size: 1.125rem !important;
+                line-height: 1.625rem !important;
+                margin-bottom: 1.5rem !important;
+                padding-bottom: 0.75rem !important;
+            }
+            
+            .body-text-mobile {
+                font-size: 0.875rem !important;
+                line-height: 1.5rem !important;
+            }
+            
+            .footer-mobile {
+                padding: 1.5rem !important;
+            }
+            
+            .contact-mobile {
+                font-size: 0.75rem !important;
+                line-height: 1.25rem !important;
+            }
+            
+            .contact-label-mobile {
+                font-size: 0.75rem !important;
+                min-width: 15px !important;
+                margin-right: 0.5rem !important;
+            }
+            
+            .social-icons-mobile {
+                height: 12px !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            .disclaimer-mobile {
+                font-size: 0.625rem !important;
+                line-height: 1.125rem !important;
+                padding-top: 1rem !important;
+            }
+            
+            .spacing-mobile {
+                margin-bottom: 1rem !important;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .subject-mobile {
+                font-size: 1.125rem !important;
+                line-height: 1.5rem !important;
+            }
+            
+            .topic-mobile {
+                font-size: 1rem !important;
+                line-height: 1.5rem !important;
+            }
+            
+            .body-text-mobile {
+                font-size: 0.8125rem !important;
+            }
+            
+            .contact-mobile {
+                font-size: 0.6875rem !important;
+                line-height: 1.125rem !important;
+            }
+            
+            .disclaimer-mobile {
+                font-size: 0.5625rem !important;
+                line-height: 1rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="py-8 md:py-4 font-sans" style="background-color: #ffffff;">
+    <div class="max-w-2xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden container-mobile" style="border: 12px solid #EDEDED;">
+        
+        <div class="p-6 border-b border-gray-200 header-mobile" style="background-color: #ffffff;">
+            <div class="text-center mb-6 spacing-mobile">
+                <img src="Images/infracredit-logo.png" alt="InfraCredit Logo" class="mx-auto h-12 logo-mobile">
+            </div>
+            
+            <div class="rounded-lg p-4 shadow-sm banner-mobile" style="background-color: #ffffff;">
+                <img src="Images/pension-for.png" alt="Pension Banner" class="w-full h-auto">
+            </div>
+        </div>
+
+        <div class="p-8 content-mobile">
+            <h1 class="text-2xl font-bold text-gray-800 mb-3 subject-mobile" id="emailSubject">
+                Conflict Declaration System Notification
+            </h1>
+            
+            <h2 class="text-xl font-semibold text-gray-700 mb-8 border-b border-gray-200 pb-3 topic-mobile" id="emailTopic">
+                2026 Budget Submission
+            </h2>
+            
+            <div class="text-gray-700 leading-relaxed space-y-5 text-base body-text-mobile">
+                <p>Dear <span id="recipientName" class="font-semibold text-gray-800">Mubarak</span>,</p>
+                
+                <div id="emailContent" class="space-y-4">
+                    <p>I trust this mail meets you well.</p>
+                    <p>Kindly submit your budget for 2026.</p>
+                </div>
+                
+                <div class="pt-2">
+                    <p class="font-medium">Best regards,</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-8 border-t border-gray-200 footer-mobile" style="background-color: #ffffff;">
+            <div class="text-sm text-gray-700 space-y-3 mb-6 contact-mobile">
+                <div class="flex items-start">
+                    <span class="text-blue-600 font-semibold mr-3 min-w-[20px] contact-label-mobile">A:</span>
+                    <span id="address" class="leading-relaxed text-blue-600">1, Adeyemo Alakija Street, Victoria Island, Lagos, Nigeria</span>
+                </div>
+                <div class="flex items-center">
+                    <span class="text-blue-600 font-semibold mr-3 min-w-[20px] contact-label-mobile">E:</span>
+                    <a href="mailto:soladunjoye@infracredit.ng" id="email" class="text-blue-600 hover:text-blue-600 transition-colors">soladunjoye@infracredit.ng</a>
+                </div>
+                <div class="flex items-center">
+                    <span class="text-blue-600 font-semibold mr-3 min-w-[20px] contact-label-mobile">M:</span>
+                    <a href="tel:+2348074863185" id="mobile" class="text-blue-600 hover:text-blue-600 transition-colors">+234 807 486 3185</a>
+                </div>
+                <div class="flex items-center">
+                    <span class="text-blue-600 font-semibold mr-3 min-w-[20px] contact-label-mobile">W:</span>
+                    <a href="https://www.infracredit.ng" id="website" class="text-blue-600 hover:text-blue-800 transition-colors">www.infracredit.ng</a>
+                </div>
+            </div>
+            
+            <div class="flex justify-center mb-6">
+                <img src="Images/Logo and social icons.png" alt="Social Media Icons" class="h-4 social-icons-mobile">
+            </div>
+            
+            <div class="text-xs text-gray-600 leading-relaxed space-y-3 border-t border-gray-300 pt-6 disclaimer-mobile">
+                <p>
+                    <strong>Infrastructure Credit Guarantee Company Plc</strong> RC No 1566639. This e-mail (including any attachment) is confidential and may be privileged. If you are not the intended recipient or the person responsible for delivering it to the intended recipient, you may not copy it or use it for any other purpose or disclose its contents to any other person. If you have received this e-mail by mistake, please notify the sender immediately and delete the e-mail (including any attachment) from your computer. Thank you for your cooperation.
+                </p>
+                <p>
+                    Unless expressly stated to the contrary in the course of notice, InfraCredit is not advising the recipient of this e-mail or any other person as to any legal, tax, accounting or regulatory matters in any jurisdiction, and InfraCredit shall have no responsibility or liability to the recipient or any person with respect thereto.
+                </p>
+                <p>
+                    Infrastructure Credit Guarantee Company Plc is registered in Nigeria with RC. No. 1566639 trading under the name and style of "InfraCredit" authorized as a business name BN 556380.
+                </p>
+                <p class="text-green-600 font-medium">
+                    🌱 ENVIRONMENT FRIENDLY EMAIL - Please consider the environment before printing this e-mail.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const emailConfig = {
+            recipientName: 'Mubarak',
+            emailSubject: 'Conflict Declaration System Notification',
+            emailTopic: '2026 Budget Submission',
+            emailContent: `
+                <p>I trust this mail meets you well.</p>
+                <p>Kindly submit your budget for 2026.</p>
+            `,
+            contactInfo: {
+                address: '1, Adeyemo Alakija Street, Victoria Island, Lagos, Nigeria',
+                email: 'soladunjoye@infracredit.ng',
+                mobile: '+234 807 486 3185',
+                website: 'www.infracredit.ng'
+            }
+        };
+
+        function populateEmailTemplate(data) {
+            if (data.recipientName) {
+                document.getElementById('recipientName').textContent = data.recipientName;
+            }
+            
+            if (data.emailSubject) {
+                document.getElementById('emailSubject').textContent = data.emailSubject;
+            }
+            
+            if (data.emailTopic) {
+                document.getElementById('emailTopic').textContent = data.emailTopic;
+            }
+            
+            if (data.emailContent) {
+                document.getElementById('emailContent').innerHTML = data.emailContent;
+            }
+            
+            if (data.contactInfo) {
+                if (data.contactInfo.address) {
+                    document.getElementById('address').textContent = data.contactInfo.address;
+                }
+                if (data.contactInfo.email) {
+                    document.getElementById('email').textContent = data.contactInfo.email;
+                    document.getElementById('email').href = `mailto:${data.contactInfo.email}`;
+                }
+                if (data.contactInfo.mobile) {
+                    document.getElementById('mobile').textContent = data.contactInfo.mobile;
+                    document.getElementById('mobile').href = `tel:${data.contactInfo.mobile.replace(/\s/g, '')}`;
+                }
+                if (data.contactInfo.website) {
+                    document.getElementById('website').textContent = data.contactInfo.website;
+                    document.getElementById('website').href = `https://${data.contactInfo.website}`;
+                }
+            }
+        }
+
+        async function fetchEmailData(emailId = null) {
+            try {
+                const url = emailId ? `/api/email-template/${emailId}` : '/api/email-template';
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    throw new Error('Failed to fetch email data');
+                }
+                
+                const data = await response.json();
+                populateEmailTemplate(data);
+                
+            } catch (error) {
+                console.error('Error fetching email data:', error);
+                populateEmailTemplate(emailConfig);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const emailId = urlParams.get('emailId');
+            
+            fetchEmailData(emailId);
+        });
+
+        async function sendEmail(recipientEmail, templateData) {
+            try {
+                const response = await fetch('/api/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        recipientEmail: recipientEmail,
+                        templateData: templateData,
+                        htmlContent: document.documentElement.outerHTML
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error('Failed to send email');
+                }
+                
+                const result = await response.json();
+                console.log('Email sent successfully:', result);
+                return result;
+                
+            } catch (error) {
+                console.error('Error sending email:', error);
+                throw error;
+            }
+        }
+
+        window.InfraEmailTemplate = {
+            populateEmailTemplate,
+            fetchEmailData,
+            sendEmail,
+            getCurrentTemplate: () => document.documentElement.outerHTML
+        };
+    </script>
+</body>
+</html>
